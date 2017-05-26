@@ -11,26 +11,26 @@ npm -g install
 ## Usage
 
 ```shell
-node app.js
+scriptr
 ```
 
 ### Adding scripts
 
 ```shell
-node app.js add --title="TITLEHERE" --script="SCRIPTCOMMANDS"
+scriptr add --title="TITLEHERE" --script="SCRIPTCOMMANDS"
 ```
 Separate commands with ;
 
 ### Deleting Scripts
 
 ```shell
-node app.js delete
+scriptr delete
 ```
 
 ### Editing Scripts
 
 ```shell
-node app.js edit
+scriptr edit
 ```
 
 ## Contributing
