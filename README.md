@@ -4,7 +4,9 @@ Execute command-line scripts from a json file.
 
 ## Installation
 
-npm install
+```shell
+npm -g install
+```
 
 ## Usage
 
@@ -17,6 +19,7 @@ node app.js
 ```shell
 node app.js add --title="TITLEHERE" --script="SCRIPTCOMMANDS"
 ```
+Separate commands with ;
 
 ### Deleting Scripts
 
