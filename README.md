@@ -1,11 +1,39 @@
-# scriptr
+# Scriptr
 
-Execute command line scripts from a json file
+Execute command-line scripts from a json file.
 
-syntax:
-#### add
-add --title="COMMAND NAME" --script="touch example.txt && echo complete"
+## Installation
 
-#### edit
+npm install
 
-#### delete
+## Usage
+
+```shell
+node app.js
+```
+
+### Adding scripts
+
+```shell
+node app.js add --title="TITLEHERE" --script="SCRIPTCOMMANDS"
+```
+
+### Deleting Scripts
+
+```shell
+node app.js delete
+```
+
+### Editing Scripts
+
+```shell
+node app.js edit
+```
+
+## Contributing
+
+pls help
+
+## Credits
+
+literally no one
