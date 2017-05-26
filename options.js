@@ -18,7 +18,7 @@ var loadJson = () => {
     return JSON.parse(json);
   }
   catch(e){
-    var err = createJson();
+    return createJson();
   }
 };
 
@@ -33,7 +33,6 @@ var parseScript= (script) => {
 
 var addCommand = (title, script) => {
     var json = loadJson();
-    console.log(title+script);
     json.commandName.push(title);
     json.commandCode.push(parseScript(script));
     saveJson(json);
