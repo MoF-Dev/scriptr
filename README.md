@@ -1,3 +1,11 @@
 # scriptr
 
-Add command line scripts to a JSON file for easy execution
+Execute command line scripts from a json file
+
+syntax:
+#### add
+add --title="COMMAND NAME" --script="touch example.txt && echo complete"
+
+#### edit
+
+#### delete

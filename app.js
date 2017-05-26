@@ -1,35 +1,23 @@
-console.log("Scriptr\n");
-
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
+
+
 const options = require('./options.js')
-const readline = require('readline');
-var cmd = require('node-cmd')
-var scripts = options.loadJson();
+
 var commands = [];
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
-
-console.log("----------------------------------");
-for(var i = 0; i < scripts.commandName.length; i++){
-    console.log("| "+"("+(i+1)+")"+". "+scripts.commandName[i]);
+const argv = yargs.argv;
+var flag = argv._[0];
+if(flag === undefined){
+    options.run();
 }
-
-rl.question('Select an entry: ', (choice) => {
-  commands = options.loadSelection(choice-1);
-  console.log("executing commands: ");
-  for(var i = 0; i < commands.length; i++){
-      options.checkCd(commands[i]);
-      cmd.get(
-        commands[i],
-        function(err, data, stderr){
-            console.log(data);
-        }
-    );
-  }
-  rl.close();
-});
+else if(flag === "a" || flag === "add"){
+    console.log(options.addCommand(argv.title, argv.script));
+    options.run()
+}
+else if(flag === "d" || flag === "delete"){
+    options.deleteCommand();
+}
+else if(flag === "e" || flag === "edit"){
+    options.editCommand();
+}
