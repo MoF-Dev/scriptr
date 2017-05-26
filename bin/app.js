@@ -1,14 +1,17 @@
-const fs = require('fs');
+#!/usr/bin/env node
 const _ = require('lodash');
 const yargs = require('yargs');
 
 
-const options = require('./options.js')
+const options = require('../lib/options.js')
 
 var commands = [];
 const argv = yargs.argv;
 var flag = argv._[0];
-if(flag === undefined){
+if(!options.loadJson()){
+    console.log("File created, please run using add command");
+}
+else if(flag === undefined){
     options.run();
 }
 else if(flag === "a" || flag === "add"){

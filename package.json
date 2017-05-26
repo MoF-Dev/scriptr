@@ -1,12 +1,19 @@
 {
   "name": "scriptr",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "blah",
+  "bin": {
+    "scriptr": "bin/app.js"
+  },
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/aa-tan/scriptr.git"
+  },
+  "author": "atan",
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.4",
