@@ -23,7 +23,6 @@ rl.question('Select an entry: ', (choice) => {
   commands = options.loadSelection(choice-1);
   console.log("executing commands: ");
   for(var i = 0; i < commands.length; i++){
-
       options.checkCd(commands[i]);
       cmd.get(
         commands[i],
