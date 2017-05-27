@@ -23,11 +23,11 @@ scriptr -a
 ```shell
 scriptr -d
 ```
-### Edit
+#### Edit
 ```shell
 scriptr -e
 ```
-### Help
+#### Help
 ```shell
 scriptr -h
 ```
