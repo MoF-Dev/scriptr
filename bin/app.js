@@ -1,26 +1,32 @@
 #!/usr/bin/env node
-const _ = require('lodash');
 const yargs = require('yargs');
-
+var program = require('commander');
 
 const options = require('../lib/options.js')
 
 var commands = [];
-const argv = yargs.argv;
-var flag = argv._[0];
+const flagCheck = yargs.argv._[0];
+program.version('0.0.1');
+program.option('-a, --add', 'Add a new Script');
+program.option('-d, --delete', 'Delete an existing Script');
+program.option('-e, --edit', 'Edit an existing Script');
+program.parse(process.argv);
+
 if(!options.loadJson()){
-    console.log("File created, please run using add command");
+    console.log("Setting up...\n")
+    options.addCommand();
 }
-else if(flag === undefined){
-    options.run();
-}
-else if(flag === "a" || flag === "add"){
-    console.log(options.addCommand(argv.title, argv.script));
+else if(program.add){
+    options.addCommand();
     options.run()
 }
-else if(flag === "d" || flag === "delete"){
+else if(program.delete){
     options.deleteCommand();
 }
-else if(flag === "e" || flag === "edit"){
+else if(program.edit){
     options.editCommand();
+}
+else if(flagCheck === undefined){
+    console.log("run")
+    options.run();
 }

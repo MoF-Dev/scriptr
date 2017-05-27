@@ -14,23 +14,22 @@ npm -g install
 scriptr
 ```
 
-### Adding scripts
-
+## Flags
+#### Add
 ```shell
-scriptr add --title="TITLEHERE" --script="SCRIPTCOMMANDS"
+scriptr -a
 ```
-Separate commands with ;
-
-### Deleting Scripts
-
+#### Delete
 ```shell
-scriptr delete
+scriptr -d
 ```
-
-### Editing Scripts
-
+### Edit
 ```shell
-scriptr edit
+scriptr -e
+```
+### Help
+```shell
+scriptr -h
 ```
 
 ## Contributing
