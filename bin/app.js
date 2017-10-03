@@ -30,3 +30,5 @@ else if(flagCheck === undefined){
     console.log("run")
     options.run();
 }
+else
+	options.runCommand(flagCheck);
